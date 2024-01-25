@@ -6,7 +6,7 @@ This document provides instructions for installing the Apache HTTP Server, PHP, 
 4. Next, install PHP, the MySQL server, and the required modules for MySQL and PHP for Apache. Depending on the OS, some of them may already be installed or unnecessary, but attempt to install them with the command "sudo apt-get install mysql-server php libapache2-mod-php php-mysql".
 5. Enable the PHP module for Apache (version may differ) with the command "sudo a2enmod php8.1".
 6. Start the MySQL server to change the root user authentication method, but do not set a password for the root user to simplify the connection for the application deployment. Use the following commands:
-"sudo service mysql start" 
+6.1."sudo service mysql start" 
 "sudo mysql"
 mysql> "USE mysql"
 mysql> "UPDATE user SET plugin='mysql_native_password' WHERE User='root';"
